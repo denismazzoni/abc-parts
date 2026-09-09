@@ -1,9 +1,10 @@
 /* Service worker do app de Expedição & Separação.
    Cache-first no shell para o app abrir e operar sem rede no galpão.
    Requisições ao Apps Script nunca são cacheadas. */
-const CACHE = 'cacto-exp-v2';
+const CACHE = 'abc-exp-v3';
 const SHELL = [
   './expedicao.html',
+  './vendor/inter-latin.woff2',
   './vendor/jsQR.min.js'
 ];
 

@@ -13,230 +13,366 @@
 <link rel="icon" href="data:image/png;base64,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">
 <script src="./vendor/jsQR.min.js"></script>
 <style>
+/* ══════════════════════════════════════════════════════════════════════════
+   ABC Parts — camada de apresentação segundo os catálogos de design.
+
+   Medidas retiradas dos catálogos: controle 32 px, raio 8 px, linha 30 px,
+   padding de célula 8 px, foco interno 2 px, checkbox 16 px, item de
+   navegação ~35 px / 13 px / padding 8×12, tipo base 12 px nos controles,
+   Inter na interface, monoespaçado em códigos, números tabulares.
+
+   Cores: os catálogos descrevem ("menu escuro", "superfícies claras", "azul
+   desaturado") mas não especificam valores, e o design-system-abcparts.md
+   citado como fonte de verdade não foi fornecido. Os valores abaixo vêm do
+   padrão oficial de documentos da ABC Parts (navy #1C2C5A, cinza #F2F2F2) e
+   do símbolo do logo (vinho #8B2F3C). Substituir quando o arquivo de tokens
+   estiver disponível.
+
+   Alvos de toque: os catálogos determinam adaptar o alvo ao dispositivo e
+   não copiar os 32 px de desktop para ações móveis. As ações primárias deste
+   app são acionadas de pé, no galpão, possivelmente com luva — permanecem
+   grandes. A densidade compacta se aplica a leitura, listas e secundários.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@font-face{
+  font-family:'Inter';
+  src:url('./vendor/inter-latin.woff2') format('woff2-variations');
+  font-weight:100 900; font-style:normal; font-display:swap;
+}
+
 :root{
-  /* Identidade ABC Parts: navy institucional + vinho do símbolo do logo. */
-  --bg:#f2f2f2; --bg2:#e4e6ea; --card:#ffffff; --card2:#1c2c5a; --card3:#f7f8fa;
-  --navy:#1c2c5a; --navy2:#2a3469;
-  --wine:#8b2f3c; --wine2:#6f2530; --wine-bg:#fbeef0; --wine-bd:#f0cdd3;
-  --text:#1a1a1a; --text2:#5a5a5a; --text3:#8d919b;
-  --green:#1f9d63; --green-bg:#e6f6ee; --red:#c62828; --red-bg:#fdeaea;
-  --blue:#2a5db0; --border:#dcdee4;
-  --font:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  --r:18px; --r-sm:12px;
+  /* superfícies */
+  --bg:#f2f2f2; --surface:#ffffff; --surface-2:#f7f8fa; --surface-3:#eceef2;
+  /* marca */
+  --navy:#1c2c5a; --navy-2:#2a3469; --navy-3:#38416f;
+  --wine:#8b2f3c; --wine-2:#73262f;
+  /* texto */
+  --text:#16181d; --text-2:#4a4f5a; --text-3:#767c88;
+  --on-dark:#ffffff; --on-dark-2:rgba(255,255,255,.68); --on-dark-3:rgba(255,255,255,.45);
+  /* semânticas — catálogo de estados: azul informação, âmbar atenção,
+     vermelho falha, verde sucesso */
+  --info:#1c4e8a;  --info-bg:#eaf1f9;  --info-bd:#c3d8ee;
+  --warn:#8a5a12;  --warn-bg:#fdf4e3;  --warn-bd:#efdcb4;
+  --danger:#a8232b;--danger-bg:#fceded;--danger-bd:#f0c9cb;
+  --ok:#1a7a4c;    --ok-bg:#e8f5ee;    --ok-bd:#bfe3d0;
+  /* estrutura */
+  --border:#d9dce3; --border-2:#e8eaee;
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,monospace;
+  /* medidas dos catálogos */
+  --r:8px; --r-lg:10px;
+  --ctrl:32px; --row:30px; --cell-x:8px; --focus:2px;
+  /* alvos de toque adaptados ao uso móvel */
+  --tap:44px; --tap-lg:56px;
   --safe-t:env(safe-area-inset-top,0px);
   --safe-b:env(safe-area-inset-bottom,0px);
 }
+
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overscroll-behavior-y:none}
 body{
-  background:var(--bg);color:var(--text);font-family:var(--font);font-size:15px;
+  background:var(--bg);color:var(--text);font-family:var(--font);
+  font-size:13px;line-height:1.45;font-feature-settings:'cv05' 1;
   display:flex;flex-direction:column;overflow:hidden;
+  -webkit-font-smoothing:antialiased;
 }
 button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit}
 button{border:none;background:none;cursor:pointer}
 
-/* ── TOPBAR ─────────────────────────────────────────── */
+/* Foco visível de 2 px, conforme os catálogos. */
+:focus-visible{outline:var(--focus) solid var(--wine);outline-offset:1px;border-radius:4px}
+.top :focus-visible,.scan :focus-visible{outline-color:#fff}
+
+/* Números tabulares e códigos monoespaçados. */
+.mono{font-family:var(--mono);font-size:.94em;letter-spacing:-.01em}
+.num{font-variant-numeric:tabular-nums}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important}
+}
+
+/* ── BARRA SUPERIOR ─────────────────────────────────────────────────── */
 .top{
-  flex-shrink:0;background:#1c2c5a;color:#fff;
-  padding:calc(var(--safe-t) + 12px) 16px 12px;
+  flex-shrink:0;background:var(--navy);color:var(--on-dark);
+  padding:calc(var(--safe-t) + 10px) 12px 10px;
   display:flex;align-items:center;gap:10px;
 }
-.top-logo{width:30px;height:30px;border-radius:8px;flex-shrink:0}
+.top-logo{width:26px;height:26px;border-radius:6px;flex-shrink:0;background:#fff;padding:2px}
 .top-t{flex:1;min-width:0}
-.top-t h1{font-size:16px;font-weight:700;letter-spacing:-.02em;line-height:1.15}
-.top-t p{font-size:11px;color:rgba(255,255,255,.5);margin-top:1px}
-.top-back{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.1);color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.sync-dot{display:flex;align-items:center;gap:5px;font-size:10px;font-weight:600;
-  padding:5px 9px;border-radius:20px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.75);flex-shrink:0}
-.sync-dot b{width:7px;height:7px;border-radius:50%;background:var(--green);display:block}
-.sync-dot.off b{background:var(--red)}
-.sync-dot.pend b{background:var(--wine)}
+.top-t h1{font-size:14px;font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.top-t p{font-size:11px;color:var(--on-dark-3);margin-top:1px;letter-spacing:.01em}
+.top-back{width:var(--ctrl);height:var(--ctrl);border-radius:var(--r);
+  background:rgba(255,255,255,.1);color:#fff;display:flex;align-items:center;
+  justify-content:center;font-size:17px;flex-shrink:0;position:relative}
+.top-back:active{background:rgba(255,255,255,.18)}
+/* A caixa visual segue os 32 px do design system, mas a área de toque é
+   ampliada para 44 px sem alterar o layout da barra — os catálogos exigem
+   adaptar o alvo ao dispositivo. Vale para o indicador de sincronia, que
+   também é acionável. */
+.top-back::after,.sync-dot::after{content:'';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);width:100%;height:var(--tap);min-width:var(--tap)}
+.sync-dot{position:relative;cursor:pointer}
 
-/* ── SCREEN ─────────────────────────────────────────── */
-.screen{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:16px 16px 24px;display:none}
+/* Indicador de sincronia — texto acompanha a cor, nunca só o ponto. */
+.sync-dot{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:500;
+  height:var(--ctrl);padding:0 10px;border-radius:var(--r);
+  background:rgba(255,255,255,.1);color:var(--on-dark-2);flex-shrink:0}
+.sync-dot b{width:6px;height:6px;border-radius:50%;background:#4ec78d;display:block}
+.sync-dot.off b{background:#e88b8b}
+.sync-dot.pend b{background:#e8bf6a}
+
+/* ── ÁREA DE CONTEÚDO ───────────────────────────────────────────────── */
+.screen{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:12px 12px 20px;display:none}
 .screen.on{display:block}
 
-/* ── NAV ────────────────────────────────────────────── */
-.nav{
-  flex-shrink:0;display:flex;background:var(--card);border-top:1px solid var(--border);
-  padding-bottom:var(--safe-b);
-}
-.nav button{flex:1;padding:9px 4px 10px;display:flex;flex-direction:column;align-items:center;gap:3px;
-  color:var(--text3);font-size:10px;font-weight:600;transition:color .15s}
-.nav button span{font-size:19px;line-height:1}
-.nav button.on{color:var(--wine)}
+/* ── NAVEGAÇÃO INFERIOR ─────────────────────────────────────────────────
+   Catálogo de navegação 14: barra inferior com rótulos visíveis, área
+   segura respeitada e destinos de navegação apenas.                      */
+.nav{flex-shrink:0;display:flex;background:var(--surface);
+  border-top:1px solid var(--border);padding-bottom:var(--safe-b)}
+.nav button{flex:1;min-height:var(--tap);padding:6px 4px 7px;display:flex;
+  flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  color:var(--text-3);font-size:10.5px;font-weight:500;position:relative}
+.nav button svg{width:19px;height:19px;stroke:currentColor;fill:none;
+  stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.nav button.on{color:var(--navy);font-weight:600}
+.nav button.on::before{content:'';position:absolute;top:0;left:22%;right:22%;
+  height:2px;background:var(--wine);border-radius:0 0 2px 2px}
 
-/* ── CARDS / BLOCKS ─────────────────────────────────── */
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:12px}
-.card-dark{background:var(--card2);color:#fff;border-radius:var(--r);padding:16px;margin-bottom:12px}
-.card-title{font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;
-  letter-spacing:.09em;margin-bottom:10px}
-.sec-title{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;
-  letter-spacing:.09em;margin:20px 2px 8px}
-.sec-title:first-child{margin-top:4px}
+/* ── SUPERFÍCIES ────────────────────────────────────────────────────── */
+.card{background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:12px;margin-bottom:10px}
+.card-title{font-size:10.5px;font-weight:600;color:var(--text-3);
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:9px}
+.sec-title{font-size:10.5px;font-weight:600;color:var(--text-3);
+  text-transform:uppercase;letter-spacing:.06em;margin:16px 2px 7px;
+  display:flex;align-items:center;justify-content:space-between}
+.sec-title:first-child{margin-top:2px}
 
-/* ── BUTTONS ────────────────────────────────────────── */
-.btn{
-  width:100%;padding:17px 18px;border-radius:16px;font-size:16px;font-weight:700;
-  display:flex;align-items:center;justify-content:center;gap:9px;
-  transition:transform .08s,filter .15s;letter-spacing:-.01em;
-}
-.btn:active{transform:scale(.975)}
-.btn:disabled{opacity:.4}
-.btn-marca{background:var(--wine);color:#fff;box-shadow:0 4px 14px rgba(139,47,60,.3)}
-.btn-dark{background:var(--card2);color:#fff}
-.btn-green{background:var(--green);color:#fff;box-shadow:0 4px 14px rgba(31,157,99,.3)}
-.btn-ghost{background:var(--card);color:var(--text2);border:1px solid var(--border);box-shadow:none}
-.btn-red{background:var(--red-bg);color:var(--red);border:1px solid #f3c9c9}
-.btn-lg{padding:22px 18px;font-size:18px;border-radius:20px}
-.btn-sm{padding:11px 14px;font-size:13px;border-radius:12px;width:auto}
-.btn-row{display:flex;gap:9px}
+/* ── BOTÕES ─────────────────────────────────────────────────────────────
+   Ação primária alta para uso em pé, com luva; secundários e terciários
+   seguem a densidade compacta dos catálogos.                              */
+.btn{width:100%;min-height:var(--tap);padding:0 14px;border-radius:var(--r);
+  font-size:14px;font-weight:600;display:flex;align-items:center;
+  justify-content:center;gap:8px;letter-spacing:-.005em;
+  border:1px solid transparent;transition:background .12s,border-color .12s}
+.btn:active{transform:translateY(.5px)}
+.btn:disabled{opacity:.45}
+.btn svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.btn-marca{background:var(--wine);color:#fff}
+.btn-marca:active{background:var(--wine-2)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:active{background:var(--navy-2)}
+.btn-green{background:var(--ok);color:#fff}
+.btn-ghost{background:var(--surface);color:var(--text-2);border-color:var(--border)}
+.btn-ghost:active{background:var(--surface-2)}
+.btn-red{background:var(--danger-bg);color:var(--danger);border-color:var(--danger-bd)}
+.btn-lg{min-height:var(--tap-lg);font-size:16px;font-weight:600}
+.btn-sm{min-height:var(--ctrl);padding:0 12px;font-size:12.5px;font-weight:500;width:auto}
+.btn-row{display:flex;gap:8px}
 .btn-row .btn{width:auto;flex:1}
 
-/* ── FORM ───────────────────────────────────────────── */
-.fld{margin-bottom:13px}
-.fld label{display:block;font-size:11px;font-weight:700;color:var(--text3);
-  text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+/* ── FORMULÁRIO ─────────────────────────────────────────────────────────
+   Catálogo de formulários: rótulo sempre visível, 12 px nos controles.    */
+.fld{margin-bottom:11px}
+.fld label{display:block;font-size:11px;font-weight:600;color:var(--text-2);
+  margin-bottom:5px;letter-spacing:.01em}
 .fld input,.fld select,.fld textarea{
-  width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:12px;
-  background:var(--card);font-size:15px;outline:none;transition:border-color .15s;
-}
-.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--wine)}
-.fld .hint{font-size:11px;color:var(--text3);margin-top:5px;line-height:1.45}
-.fld input.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px}
-.sw{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;
-  border-bottom:1px solid var(--border)}
+  width:100%;min-height:var(--tap);padding:9px 10px;border:1px solid var(--border);
+  border-radius:var(--r);background:var(--surface);font-size:14px;outline:none;
+  transition:border-color .12s,box-shadow .12s}
+.fld textarea{min-height:60px;resize:vertical;line-height:1.5}
+.fld input:focus,.fld select:focus,.fld textarea:focus{
+  border-color:var(--navy);box-shadow:0 0 0 2px rgba(28,44,90,.12);outline:none}
+.fld input.mono{font-family:var(--mono);letter-spacing:0}
+.fld .hint{font-size:11.5px;color:var(--text-3);margin-top:5px;line-height:1.45}
+
+.sw{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  min-height:var(--tap);padding:8px 0;border-bottom:1px solid var(--border-2)}
 .sw:last-child{border-bottom:none}
-.sw-t{font-size:14px;font-weight:600}
-.sw-s{font-size:11px;color:var(--text3);margin-top:2px}
-.tog{width:46px;height:27px;border-radius:20px;background:var(--bg2);position:relative;
-  flex-shrink:0;transition:background .2s}
-.tog::after{content:'';position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;
-  background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:transform .2s}
-.tog.on{background:var(--green)}
-.tog.on::after{transform:translateX(19px)}
+.sw-t{font-size:13px;font-weight:500}
+.sw-s{font-size:11.5px;color:var(--text-3);margin-top:1px;line-height:1.4}
+.tog{width:40px;height:23px;border-radius:12px;background:var(--surface-3);
+  position:relative;flex-shrink:0;transition:background .18s;
+  border:1px solid var(--border)}
+.tog::after{content:'';position:absolute;top:2px;left:2px;width:17px;height:17px;
+  border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.25);
+  transition:transform .18s}
+.tog.on{background:var(--ok);border-color:var(--ok)}
+.tog.on::after{transform:translateX(17px)}
 
-/* ── KPI ────────────────────────────────────────────── */
-.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:12px}
-.kpi{background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);padding:12px 11px;text-align:center}
-.kpi-v{font-size:21px;font-weight:700;letter-spacing:-.035em;line-height:1.1}
-.kpi-l{font-size:9.5px;color:var(--text3);font-weight:600;text-transform:uppercase;
-  letter-spacing:.05em;margin-top:4px;line-height:1.25}
+/* ── INDICADORES ────────────────────────────────────────────────────── */
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.kpi{background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--r);padding:9px 8px;text-align:center}
+.kpi-v{font-size:18px;font-weight:650;letter-spacing:-.02em;line-height:1.15;
+  font-variant-numeric:tabular-nums}
+.kpi-l{font-size:9.5px;color:var(--text-3);font-weight:500;text-transform:uppercase;
+  letter-spacing:.04em;margin-top:3px;line-height:1.25}
 
-/* ── ACTIVE SEPARATION HERO ─────────────────────────── */
-.hero{background:var(--card2);color:#fff;border-radius:22px;padding:20px;margin-bottom:14px;position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;right:-40px;top:-40px;width:150px;height:150px;
-  border-radius:50%;background:rgba(255,255,255,.07)}
-.hero-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:rgba(255,255,255,.45);margin-bottom:5px}
-.hero-pv{font-size:29px;font-weight:700;letter-spacing:-.035em;line-height:1.05;
-  word-break:break-all;position:relative}
-.hero-timer{font-size:44px;font-weight:700;letter-spacing:-.045em;line-height:1;
-  font-variant-numeric:tabular-nums;margin:14px 0 3px;position:relative}
-.hero-sub{font-size:12px;color:rgba(255,255,255,.5);position:relative}
-.hero-chips{display:flex;gap:7px;margin-top:14px;position:relative;flex-wrap:wrap}
-.hchip{background:rgba(255,255,255,.11);border-radius:20px;padding:6px 12px;font-size:12px;font-weight:600}
+/* ── CARTÃO DE CONTEXTO (separação corrente / concluída) ────────────── */
+.hero{background:var(--navy);color:#fff;border-radius:var(--r-lg);
+  padding:14px;margin-bottom:10px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-30px;top:-30px;width:120px;height:120px;
+  border-radius:50%;background:rgba(255,255,255,.045)}
+.hero-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--on-dark-3);margin-bottom:5px;position:relative}
+.hero-pv{font-size:22px;font-weight:650;letter-spacing:-.02em;line-height:1.15;
+  word-break:break-all;position:relative;font-family:var(--mono)}
+.hero-timer{font-size:38px;font-weight:600;letter-spacing:-.03em;line-height:1;
+  font-variant-numeric:tabular-nums;margin:12px 0 3px;position:relative}
+.hero-sub{font-size:11.5px;color:var(--on-dark-2);position:relative;line-height:1.45}
+.hero-chips{display:flex;gap:6px;margin-top:11px;position:relative;flex-wrap:wrap}
+.hchip{background:rgba(255,255,255,.12);border-radius:var(--r);padding:4px 9px;
+  font-size:11.5px;font-weight:500;font-variant-numeric:tabular-nums}
 
-/* ── ITEM LIST ──────────────────────────────────────── */
-.item{
-  display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r-sm);padding:12px 13px;margin-bottom:8px;
-  animation:pop .25s ease-out;
-}
-@keyframes pop{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}
-.item-n{width:29px;height:29px;border-radius:9px;background:var(--bg2);color:var(--text2);
-  display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+/* ── LISTA DE ITENS ─────────────────────────────────────────────────────
+   Catálogo de tabelas: padding de célula 8 px, borda discreta, código
+   monoespaçado, identidade do registro sempre visível.                    */
+.item{display:flex;align-items:center;gap:10px;background:var(--surface);
+  border:1px solid var(--border);border-radius:var(--r);
+  padding:7px var(--cell-x);margin-bottom:5px;animation:pop .18s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.item-n{width:24px;height:24px;border-radius:6px;background:var(--surface-3);
+  color:var(--text-2);display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:600;flex-shrink:0;font-variant-numeric:tabular-nums}
 .item-b{flex:1;min-width:0}
-.item-code{font-size:15px;font-weight:700;letter-spacing:-.01em;word-break:break-all;line-height:1.25}
-.item-meta{font-size:11px;color:var(--text3);margin-top:2px}
-.item-x{width:31px;height:31px;border-radius:9px;background:var(--bg2);color:var(--text3);
-  display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.item-code{font-size:14px;font-weight:600;letter-spacing:-.005em;word-break:break-all;
+  line-height:1.3;font-family:var(--mono)}
+.item-meta{font-size:11px;color:var(--text-3);margin-top:1px;
+  font-variant-numeric:tabular-nums}
+.item-x{width:var(--tap);height:var(--tap);margin:-6px -4px -6px 0;border-radius:var(--r);
+  color:var(--text-3);display:flex;align-items:center;justify-content:center;
+  font-size:15px;flex-shrink:0}
+.item-x:active{background:var(--surface-3);color:var(--danger)}
 
-/* ── ROW (history) ──────────────────────────────────── */
-.row{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border);
-  border-radius:var(--r-sm);padding:13px;margin-bottom:8px;width:100%;text-align:left}
-.row:active{background:var(--card3)}
+/* ── LINHA DE REGISTRO (histórico) ──────────────────────────────────── */
+.row{display:flex;align-items:center;gap:10px;background:var(--surface);
+  border:1px solid var(--border);border-radius:var(--r);padding:9px var(--cell-x);
+  margin-bottom:5px;width:100%;text-align:left;min-height:var(--tap)}
+.row:active{background:var(--surface-2)}
 .row-b{flex:1;min-width:0}
-.row-t{font-size:15px;font-weight:700;letter-spacing:-.015em;word-break:break-all}
-.row-s{font-size:11.5px;color:var(--text3);margin-top:3px}
+.row-t{font-size:14px;font-weight:600;letter-spacing:-.005em;word-break:break-all;
+  font-family:var(--mono)}
+.row-s{font-size:11px;color:var(--text-3);margin-top:2px;line-height:1.4;
+  font-variant-numeric:tabular-nums}
+/* Números à direita, tabulares — catálogo de tabelas. */
 .row-r{text-align:right;flex-shrink:0}
-.row-v{font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
-.row-vs{font-size:10px;color:var(--text3);margin-top:2px}
+.row-v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.row-vs{font-size:9.5px;color:var(--text-3);margin-top:1px;text-transform:uppercase;
+  letter-spacing:.04em}
 
-.tag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;
-  padding:3px 8px;border-radius:20px;letter-spacing:.02em}
-.tag-g{background:var(--green-bg);color:var(--green)}
-.tag-r{background:var(--red-bg);color:var(--red)}
-.tag-y{background:var(--wine-bg);color:var(--wine2)}
-.tag-n{background:var(--bg2);color:var(--text3)}
+/* ── MARCADORES DE ESTADO ───────────────────────────────────────────────
+   Texto acompanha a cor; nunca só cor.                                    */
+.tag{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:600;
+  padding:1px 6px;border-radius:4px;letter-spacing:.01em;border:1px solid transparent;
+  vertical-align:middle}
+.tag-g{background:var(--ok-bg);color:var(--ok);border-color:var(--ok-bd)}
+.tag-r{background:var(--danger-bg);color:var(--danger);border-color:var(--danger-bd)}
+.tag-y{background:var(--warn-bg);color:var(--warn);border-color:var(--warn-bd)}
+.tag-n{background:var(--surface-3);color:var(--text-3);border-color:var(--border)}
 
-.empty{text-align:center;padding:44px 22px;color:var(--text3)}
-.empty-i{font-size:42px;margin-bottom:10px;opacity:.35}
-.empty-t{font-size:14px;font-weight:600;color:var(--text2);margin-bottom:4px}
-.empty-s{font-size:12.5px;line-height:1.5}
+/* ── ESTADO VAZIO ───────────────────────────────────────────────────────
+   Catálogo de estados: explicar a ausência e a ação; sem ilustração alta. */
+.empty{text-align:center;padding:26px 18px;color:var(--text-3);
+  background:var(--surface-2);border:1px dashed var(--border);border-radius:var(--r)}
+.empty-i{font-size:22px;margin-bottom:7px;opacity:.4}
+.empty-t{font-size:13px;font-weight:600;color:var(--text-2);margin-bottom:3px}
+.empty-s{font-size:11.5px;line-height:1.5}
 
-.dl{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--border);font-size:14px}
+/* ── AVISO DE SEÇÃO / BANNER ────────────────────────────────────────────
+   Condição persistente usa aviso, não toast — catálogo de estados.        */
+.note{display:flex;gap:9px;padding:10px;border-radius:var(--r);
+  border:1px solid var(--warn-bd);background:var(--warn-bg);margin-bottom:10px}
+.note-i{flex-shrink:0;font-size:14px;line-height:1.3}
+.note-b{flex:1;min-width:0}
+.note-t{font-size:12.5px;font-weight:600;color:var(--warn);line-height:1.4}
+.note-s{font-size:11.5px;color:var(--text-2);margin-top:2px;line-height:1.45}
+.note .btn{margin-top:9px}
+
+/* ── LISTA DESCRITIVA ───────────────────────────────────────────────── */
+.dl{display:flex;justify-content:space-between;gap:12px;padding:7px 0;
+  border-bottom:1px solid var(--border-2);font-size:13px;min-height:var(--row)}
 .dl:last-child{border-bottom:none}
-.dl-k{color:var(--text3);flex-shrink:0}
-.dl-v{font-weight:700;text-align:right;word-break:break-all}
+.dl-k{color:var(--text-3);flex-shrink:0}
+.dl-v{font-weight:600;text-align:right;word-break:break-all;
+  font-variant-numeric:tabular-nums}
 
-/* ── SCANNER ────────────────────────────────────────── */
+/* ── LEITOR ─────────────────────────────────────────────────────────── */
 .scan{position:fixed;inset:0;background:#000;z-index:200;display:none;flex-direction:column}
 .scan.on{display:flex}
 .scan video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .scan-ov{position:absolute;inset:0;display:flex;flex-direction:column;
-  padding:calc(var(--safe-t) + 14px) 16px calc(var(--safe-b) + 18px)}
-.scan-head{display:flex;align-items:flex-start;gap:12px;position:relative;z-index:2}
-.scan-head-t{flex:1;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.8)}
-.scan-head-t h2{font-size:17px;font-weight:700}
-.scan-head-t p{font-size:12px;opacity:.75;margin-top:2px}
-.scan-btn-c{width:38px;height:38px;border-radius:12px;background:rgba(0,0,0,.5);color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0;backdrop-filter:blur(6px)}
+  padding:calc(var(--safe-t) + 12px) 12px calc(var(--safe-b) + 14px)}
+.scan-head{display:flex;align-items:flex-start;gap:10px;position:relative;z-index:2}
+.scan-head-t{flex:1;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.85)}
+.scan-head-t h2{font-size:15px;font-weight:600}
+.scan-head-t p{font-size:11.5px;opacity:.8;margin-top:1px;font-family:var(--mono)}
+.scan-btn-c{width:var(--tap);height:var(--tap);border-radius:var(--r);
+  background:rgba(0,0,0,.55);color:#fff;display:flex;align-items:center;
+  justify-content:center;font-size:17px;flex-shrink:0;backdrop-filter:blur(6px)}
 .scan-mid{flex:1;display:flex;align-items:center;justify-content:center;position:relative;z-index:2}
-.reticle{width:min(72vw,290px);aspect-ratio:1;border-radius:26px;position:relative;
-  box-shadow:0 0 0 100vmax rgba(0,0,0,.5)}
-.reticle i{position:absolute;width:38px;height:38px;border:4px solid #8b2f3c;border-radius:4px}
-.reticle i:nth-child(1){top:-2px;left:-2px;border-right:0;border-bottom:0;border-top-left-radius:20px}
-.reticle i:nth-child(2){top:-2px;right:-2px;border-left:0;border-bottom:0;border-top-right-radius:20px}
-.reticle i:nth-child(3){bottom:-2px;left:-2px;border-right:0;border-top:0;border-bottom-left-radius:20px}
-.reticle i:nth-child(4){bottom:-2px;right:-2px;border-left:0;border-top:0;border-bottom-right-radius:20px}
-.reticle.hit i{border-color:#2db87a}
-.scan-foot{position:relative;z-index:2;display:flex;flex-direction:column;gap:10px}
-.scan-msg{color:#fff;text-align:center;font-size:13px;text-shadow:0 1px 6px rgba(0,0,0,.85);min-height:19px}
-.scan-acts{display:flex;gap:9px}
-.scan-acts button{flex:1;padding:14px;border-radius:14px;background:rgba(255,255,255,.15);
-  color:#fff;font-size:14px;font-weight:700;backdrop-filter:blur(8px)}
+.reticle{width:min(70vw,270px);aspect-ratio:1;border-radius:var(--r-lg);position:relative;
+  box-shadow:0 0 0 100vmax rgba(0,0,0,.52)}
+.reticle i{position:absolute;width:32px;height:32px;border:3px solid var(--wine);border-radius:2px}
+.reticle i:nth-child(1){top:-2px;left:-2px;border-right:0;border-bottom:0;border-top-left-radius:10px}
+.reticle i:nth-child(2){top:-2px;right:-2px;border-left:0;border-bottom:0;border-top-right-radius:10px}
+.reticle i:nth-child(3){bottom:-2px;left:-2px;border-right:0;border-top:0;border-bottom-left-radius:10px}
+.reticle i:nth-child(4){bottom:-2px;right:-2px;border-left:0;border-top:0;border-bottom-right-radius:10px}
+.reticle.hit i{border-color:#3ec97f}
+.scan-foot{position:relative;z-index:2;display:flex;flex-direction:column;gap:9px}
+.scan-msg{color:#fff;text-align:center;font-size:12.5px;
+  text-shadow:0 1px 5px rgba(0,0,0,.9);min-height:18px;line-height:1.4}
+.scan-acts{display:flex;gap:8px}
+.scan-acts button{flex:1;min-height:var(--tap);border-radius:var(--r);
+  background:rgba(255,255,255,.16);color:#fff;font-size:13px;font-weight:600;
+  backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;gap:6px}
 .scan-acts button.torch-on{background:var(--wine)}
 
-/* ── SHEET / MODAL ──────────────────────────────────── */
+/* ── PAINEL INFERIOR ────────────────────────────────────────────────── */
 .sheet{position:fixed;inset:0;z-index:300;display:none}
 .sheet.on{display:block}
-.sheet-bg{position:absolute;inset:0;background:rgba(0,0,0,.45);animation:fade .2s}
+.sheet-bg{position:absolute;inset:0;background:rgba(22,24,29,.5);animation:fade .16s}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 .sheet-body{position:absolute;left:0;right:0;bottom:0;background:var(--bg);
-  border-radius:24px 24px 0 0;padding:22px 18px calc(var(--safe-b) + 18px);
-  animation:up .25s cubic-bezier(.2,.9,.3,1);max-height:88vh;overflow-y:auto}
+  border-radius:14px 14px 0 0;padding:16px 14px calc(var(--safe-b) + 14px);
+  animation:up .2s cubic-bezier(.2,.9,.3,1);max-height:88vh;overflow-y:auto}
 @keyframes up{from{transform:translateY(100%)}to{transform:none}}
-.sheet-grip{width:38px;height:4px;border-radius:3px;background:var(--border);margin:-8px auto 16px}
-.sheet-t{font-size:19px;font-weight:700;letter-spacing:-.025em;margin-bottom:5px}
-.sheet-s{font-size:13.5px;color:var(--text2);line-height:1.5;margin-bottom:18px}
+.sheet-grip{width:32px;height:3px;border-radius:2px;background:var(--border);margin:-6px auto 14px}
+.sheet-t{font-size:16px;font-weight:650;letter-spacing:-.015em;margin-bottom:4px}
+.sheet-s{font-size:13px;color:var(--text-2);line-height:1.5;margin-bottom:14px}
 
-/* ── TOAST ──────────────────────────────────────────── */
-.toast{position:fixed;left:16px;right:16px;bottom:calc(var(--safe-b) + 76px);z-index:400;
-  background:var(--card2);color:#fff;padding:13px 16px;border-radius:14px;font-size:14px;font-weight:600;
-  box-shadow:0 8px 26px rgba(0,0,0,.3);opacity:0;transform:translateY(14px);
-  transition:opacity .2s,transform .2s;pointer-events:none;text-align:center}
+/* ── MENSAGEM BREVE ─────────────────────────────────────────────────────
+   Toast só para confirmação breve, conforme a escolha de contêiner do
+   catálogo de estados.                                                    */
+.toast{position:fixed;left:12px;right:12px;bottom:calc(var(--safe-b) + 68px);z-index:400;
+  background:var(--navy);color:#fff;padding:10px 13px;border-radius:var(--r);
+  font-size:13px;font-weight:500;box-shadow:0 6px 20px rgba(22,24,29,.28);
+  opacity:0;transform:translateY(10px);transition:opacity .16s,transform .16s;
+  pointer-events:none;text-align:center;line-height:1.4}
 .toast.on{opacity:1;transform:none}
-.toast.ok{background:var(--green)}
-.toast.err{background:var(--red)}
+.toast.ok{background:var(--ok)}
+.toast.err{background:var(--danger)}
 
-.flash{position:fixed;inset:0;background:#2db87a;z-index:500;opacity:0;pointer-events:none;
-  transition:opacity .12s}
-.flash.on{opacity:.32}
+.flash{position:fixed;inset:0;background:#3ec97f;z-index:500;opacity:0;
+  pointer-events:none;transition:opacity .1s}
+.flash.on{opacity:.22}
 
-.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-.mut{color:var(--text3)}
+.empty-i svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.4;
+  stroke-linecap:round;stroke-linejoin:round}
+.empty-i{opacity:.35;line-height:0;display:flex;justify-content:center}
+.scan-acts button svg,.scan-btn-c svg{width:17px;height:17px;stroke:currentColor;fill:none;
+  stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.item-x svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;
+  stroke-linecap:round}
+.btn-lg svg{width:19px;height:19px}
+.btn-sm svg{width:14px;height:14px}
+/* O triângulo de "continuar" é o único ícone preenchido. */
+.btn svg path[d^="M5 3l14"]{fill:currentColor;stroke:none}
+
+.mut{color:var(--text-3)}
 .center{text-align:center}
 </style>
 </head>
@@ -259,9 +395,9 @@ button{border:none;background:none;cursor:pointer}
 <div class="screen" id="sc-cfg"></div>
 
 <div class="nav" id="nav">
-  <button class="on" data-nav="home" onclick="EXP.go('home')"><span>📦</span>Início</button>
-  <button data-nav="hist" onclick="EXP.go('hist')"><span>📋</span>Histórico</button>
-  <button data-nav="cfg" onclick="EXP.go('cfg')"><span>⚙️</span>Config</button>
+  <button class="on" data-nav="home" onclick="EXP.go('home')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8v8a2 2 0 0 1-1 1.7l-7 4a2 2 0 0 1-2 0l-7-4A2 2 0 0 1 3 16V8a2 2 0 0 1 1-1.7l7-4a2 2 0 0 1 2 0l7 4A2 2 0 0 1 21 8z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>Início</button>
+  <button data-nav="hist" onclick="EXP.go('hist')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>Histórico</button>
+  <button data-nav="cfg" onclick="EXP.go('cfg')"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h2M10 12h10M4 18h8M16 18h4"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="14" cy="18" r="2"/></svg>Config</button>
 </div>
 
 <div class="scan" id="scan">
@@ -270,14 +406,14 @@ button{border:none;background:none;cursor:pointer}
   <div class="scan-ov">
     <div class="scan-head">
       <div class="scan-head-t"><h2 id="scan-title">Ler código</h2><p id="scan-sub"></p></div>
-      <button class="scan-btn-c" onclick="EXP.scanClose()">✕</button>
+      <button class="scan-btn-c" onclick="EXP.scanClose()" aria-label="Fechar leitor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     </div>
     <div class="scan-mid"><div class="reticle" id="reticle"><i></i><i></i><i></i><i></i></div></div>
     <div class="scan-foot">
       <div class="scan-msg" id="scan-msg">Aponte a câmera para o código</div>
       <div class="scan-acts">
-        <button id="scan-torch" onclick="EXP.torch()" style="display:none">🔦 Lanterna</button>
-        <button onclick="EXP.scanManual()">⌨️ Digitar</button>
+        <button id="scan-torch" onclick="EXP.torch()" style="display:none"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2h6v3l-1.5 2v13a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V7L9 5z"/><path d="M9 5h6"/></svg>Lanterna</button>
+        <button onclick="EXP.scanManual()"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"/></svg>Digitar</button>
       </div>
     </div>
   </div>
@@ -442,6 +578,28 @@ function extrair(bruto, regexStr){
   if(kv) return kv[1].trim();
   return v;
 }
+
+/* ── ÍCONES ─────────────────────────────────────────────────────────────
+   Traço de 24×24 herdando currentColor. Os catálogos pedem ícones
+   discretos e rótulo textual junto; nenhum ícone carrega sentido sozinho. */
+const IC = (function(){
+  const w = d => `<svg viewBox="0 0 24 24" aria-hidden="true">${d}</svg>`;
+  return {
+    escanear: w('<path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3"/><path d="M3 12h18"/>'),
+    teclado:  w('<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h12"/>'),
+    lanterna: w('<path d="M9 2h6v3l-1.5 2v13a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V7L9 5z"/><path d="M9 5h6"/>'),
+    check:    w('<path d="M20 6 9 17l-5-5"/>'),
+    seguir:   w('<path d="M5 3l14 9-14 9z"/>'),
+    baixar:   w('<path d="M12 3v12M7 11l5 5 5-5"/><path d="M4 20h16"/>'),
+    enviar:   w('<path d="M12 21V9M7 13l5-5 5 5"/><path d="M4 4h16"/>'),
+    partilhar:w('<path d="M12 16V4M8 8l4-4 4 4"/><path d="M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/>'),
+    fechar:   w('<path d="M6 6l12 12M18 6L6 18"/>'),
+    caixa:    w('<path d="M21 8v8a2 2 0 0 1-1 1.7l-7 4a2 2 0 0 1-2 0l-7-4A2 2 0 0 1 3 16V8a2 2 0 0 1 1-1.7l7-4a2 2 0 0 1 2 0l7 4A2 2 0 0 1 21 8z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/>'),
+    lista:    w('<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>'),
+    ajustes:  w('<path d="M4 6h10M18 6h2M4 12h2M10 12h10M4 18h8M16 18h4"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="14" cy="18" r="2"/>'),
+    etiqueta: w('<path d="M12.6 3H21v8.4a2 2 0 0 1-.6 1.4l-7.6 7.6a2 2 0 0 1-2.8 0l-6-6a2 2 0 0 1 0-2.8l7.6-7.6a2 2 0 0 1 1.4-.6z"/><path d="M17 7h.01"/>'),
+  };
+})();
 
 /* ── FEEDBACK ─────────────────────────────────────────────────────────── */
 let toastTimer = null;
@@ -862,7 +1020,7 @@ const Scanner = {
     }
 
     if(this.alvo === 'item' && S.cfg.scanContinuo){
-      $('scan-msg').textContent = `✓ ${extrair(codigo, S.cfg.regexItem)} — ${S.ativa ? S.ativa.itens.length : 0} item(ns). Leia o próximo.`;
+      $('scan-msg').textContent = `OK · ${extrair(codigo, S.cfg.regexItem)} — ${S.ativa ? S.ativa.itens.length : 0} item(ns). Leia o próximo.`;
       $('scan-sub').textContent = S.ativa ? `${rotuloPV(S.ativa.pv)} · ${S.ativa.itens.length} lido(s)` : '';
     } else {
       this.fechar();
@@ -1002,15 +1160,15 @@ function renderHome(){
       <div class="hero-sub">Iniciada às ${fmtHora(S.ativa.inicio)} · ${S.ativa.itens.length} item(ns) lido(s)</div>
     </div>
     <button class="btn btn-marca btn-lg" style="margin-bottom:12px" onclick="EXP.go('sep')">
-      ▶ Continuar separação
+      ${IC.seguir} Continuar separação
     </button>`;
   } else {
     html += `
     <button class="btn btn-marca btn-lg" style="margin-bottom:12px" onclick="EXP.lerPV()">
-      📷 Ler QR do PV
+      ${IC.escanear} Ler QR do PV
     </button>
     <button class="btn btn-ghost" style="margin-bottom:14px" onclick="EXP.digitarPV()">
-      ⌨️ Digitar número do PV
+      ${IC.teclado} Digitar número do PV
     </button>`;
   }
 
@@ -1025,7 +1183,7 @@ function renderHome(){
   html += `<div class="sec-title">Últimas separações</div>`;
   if(!recentes.length){
     html += `<div class="empty">
-      <div class="empty-i">📦</div>
+      <div class="empty-i">${IC.caixa}</div>
       <div class="empty-t">Nenhuma separação registrada</div>
       <div class="empty-s">Leia o QR Code de um PV para começar.<br>O cronômetro roda até você finalizar.</div>
     </div>`;
@@ -1038,12 +1196,13 @@ function renderHome(){
   }
 
   if(!S.cfg.operador){
-    html += `<div class="card" style="margin-top:14px;background:var(--wine-bg);border-color:var(--wine-bd)">
-      <div style="font-size:13.5px;line-height:1.5">
-        <b>Identifique o operador</b><br>
-        <span class="mut">Sem o nome, o Sheets não mostra quem fez cada separação.</span>
+    html += `<div class="note" style="margin-top:14px">
+      <div class="note-i">!</div>
+      <div class="note-b">
+        <div class="note-t">Identifique o operador</div>
+        <div class="note-s">Sem o nome, o Sheets não mostra quem fez cada separação.</div>
+        <button class="btn btn-dark btn-sm" onclick="EXP.go('cfg')">Configurar</button>
       </div>
-      <button class="btn btn-dark btn-sm" style="margin-top:11px" onclick="EXP.go('cfg')">Configurar</button>
     </div>`;
   }
 
@@ -1086,10 +1245,10 @@ function renderSep(){
   </div>
 
   <button class="btn btn-marca btn-lg" style="margin-bottom:9px" onclick="EXP.lerItem()">
-    📷 Ler etiqueta do item
+    ${IC.escanear} Ler etiqueta do item
   </button>
   <button class="btn btn-ghost" style="margin-bottom:16px" onclick="EXP.digitarItem()">
-    ⌨️ Digitar rastreabilidade
+    ${IC.teclado} Digitar rastreabilidade
   </button>
 
   <div class="sec-title">Itens lidos (${a.itens.length})</div>
@@ -1100,10 +1259,10 @@ function renderSep(){
         <div class="item-code">${esc(i.rastreabilidade)}</div>
         <div class="item-meta">${fmtHora(i.ts)} · +${fmtDurCurto(i.desdeAnteriorMs)} desde o anterior</div>
       </div>
-      <button class="item-x" onclick="EXP.removerItem(${i.seq})">✕</button>
+      <button class="item-x" onclick="EXP.removerItem(${i.seq})" aria-label="Remover item ${i.seq}">${IC.fechar}</button>
     </div>`).join('')
    : `<div class="empty">
-        <div class="empty-i">🏷️</div>
+        <div class="empty-i">${IC.etiqueta}</div>
         <div class="empty-t">Nenhum item lido ainda</div>
         <div class="empty-s">Leia a etiqueta de cada item separado.<br>O número de rastreabilidade é o do pedido de compra.</div>
       </div>`}
@@ -1115,7 +1274,7 @@ function renderSep(){
   </div>
 
   <button class="btn btn-green btn-lg" style="margin-bottom:9px" onclick="EXP.pedirFinalizar()">
-    ✓ Finalizar separação
+    ${IC.check} Finalizar separação
   </button>
   <button class="btn btn-red" onclick="EXP.pedirCancelar()">Cancelar separação</button>
   <div style="height:10px"></div>`;
@@ -1151,14 +1310,14 @@ function renderHist(){
 
   <div class="sec-title">Separações (${lista.length})</div>
   ${lista.length ? lista.map(linhaSep).join('') : `<div class="empty">
-      <div class="empty-i">📋</div>
+      <div class="empty-i">${IC.lista}</div>
       <div class="empty-t">Nada no período</div>
       <div class="empty-s">Troque o filtro acima ou registre uma nova separação.</div>
     </div>`}
 
   ${lista.length ? `<div class="btn-row" style="margin-top:14px">
-    <button class="btn btn-ghost btn-sm" onclick="EXP.exportar('sep')">⬇ CSV separações</button>
-    <button class="btn btn-ghost btn-sm" onclick="EXP.exportar('itens')">⬇ CSV itens</button>
+    <button class="btn btn-ghost btn-sm" onclick="EXP.exportar('sep')">${IC.baixar} CSV separações</button>
+    <button class="btn btn-ghost btn-sm" onclick="EXP.exportar('itens')">${IC.baixar} CSV itens</button>
   </div>` : ''}
   <div style="height:10px"></div>`;
 }
@@ -1178,9 +1337,9 @@ function renderDet(){
   </div>
 
   ${s.status === 'finalizada' ? `
-  <div class="card" style="background:var(--green-bg);border-color:#bfe6d2">
-    <div class="card-title" style="color:var(--green)">Liberado para produção</div>
-    <div style="font-size:23px;font-weight:700;letter-spacing:-.03em">${fmtDataHora(s.liberadoEm || s.fim)}</div>
+  <div class="card" style="background:var(--ok-bg);border-color:var(--ok-bd)">
+    <div class="card-title" style="color:var(--ok)">Liberado para produção</div>
+    <div class="num" style="font-size:19px;font-weight:650;letter-spacing:-.02em">${fmtDataHora(s.liberadoEm || s.fim)}</div>
   </div>` : ''}
 
   <div class="card">
@@ -1211,8 +1370,8 @@ function renderDet(){
 
   <div class="btn-row" style="margin-top:14px">
     ${s.sync !== 'ok' && s.status === 'finalizada'
-      ? `<button class="btn btn-dark btn-sm" onclick="EXP.sincronizar(true)">↑ Enviar ao Sheets</button>` : ''}
-    <button class="btn btn-ghost btn-sm" onclick="EXP.compartilhar('${s.id}')">⇪ Compartilhar</button>
+      ? `<button class="btn btn-dark btn-sm" onclick="EXP.sincronizar(true)">${IC.enviar} Enviar ao Sheets</button>` : ''}
+    <button class="btn btn-ghost btn-sm" onclick="EXP.compartilhar('${s.id}')">${IC.partilhar} Compartilhar</button>
   </div>
   <div style="height:10px"></div>`;
 }
@@ -1288,7 +1447,7 @@ function renderCfg(){
       </div>
     </div>
     <button class="btn btn-dark btn-sm" style="width:100%;margin-top:13px" onclick="EXP.sincronizar(true)">
-      ↑ Enviar pendentes agora (${pendentes().length})
+      ${IC.enviar} Enviar pendentes agora (${pendentes().length})
     </button>
   </div>
 
@@ -1297,7 +1456,7 @@ function renderCfg(){
     <div class="dl"><span class="dl-k">Separações guardadas</span><span class="dl-v">${S.historico.length}</span></div>
     <div class="dl"><span class="dl-k">Aguardando envio</span><span class="dl-v">${pendentes().length}</span></div>
     <div class="btn-row" style="margin-top:13px">
-      <button class="btn btn-ghost btn-sm" onclick="EXP.backup()">⬇ Backup JSON</button>
+      <button class="btn btn-ghost btn-sm" onclick="EXP.backup()">${IC.baixar} Backup JSON</button>
       <button class="btn btn-red btn-sm" onclick="EXP.pedirLimpar()">Limpar histórico</button>
     </div>
   </div>

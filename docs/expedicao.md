@@ -127,6 +127,45 @@ foca no quadrado central da mira; a cada 4 análises varre o quadro inteiro,
 para não ignorar um código pouco fora da mira. Em teste com câmera simulada,
 a leitura levou ~200–270 ms.
 
+## Design
+
+A apresentação segue os catálogos de design da ABC Parts (navegação, tabelas,
+formulários, busca e estados). O que foi aplicado:
+
+| Token | Valor | Origem |
+|---|---|---|
+| Tipografia | Inter, embutida em `vendor/inter-latin.woff2` (SIL OFL) | catálogos |
+| Raio | 8 px | catálogos |
+| Altura de controle | 32 px | catálogos |
+| Linha / padding de célula | 30 px / 8 px | catálogos |
+| Foco | contorno de 2 px | catálogos |
+| Navy institucional | `#1C2C5A` | padrão de documentos ABC Parts |
+| Vinho do símbolo | `#8B2F3C` | logo oficial |
+| Semânticas | azul informação, âmbar atenção, vermelho falha, verde sucesso | catálogos |
+
+Também aplicados: números tabulares alinhados à direita, códigos em
+monoespaçado, ícones de traço em vez de emoji, marcadores de estado com texto
+além da cor, e `prefers-reduced-motion` respeitado.
+
+### Duas decisões que valem registro
+
+**As cores exatas foram derivadas, não lidas.** Os catálogos descrevem a
+paleta ("menu escuro", "superfícies claras", "azul desaturado") mas não trazem
+valores, e o `design-system-abcparts.md` que eles citam como fonte de verdade
+não estava disponível. Os valores acima vêm do padrão oficial de documentos da
+ABC Parts e do logo. Quando o arquivo de tokens aparecer, substituir o bloco
+`:root` em `expedicao.html` — é a única coisa a mexer.
+
+**Os alvos de toque não seguem os 32 px de desktop.** Os próprios catálogos
+determinam adaptar o alvo ao dispositivo e não copiar a altura de desktop para
+ações móveis. Este app é usado de pé, no galpão, possivelmente com luva: a ação
+primária tem 56 px, as demais 44 px. Onde a caixa visual precisa manter os
+32 px do sistema — botão voltar e indicador de sincronia na barra superior — a
+área de toque é ampliada para 44 px por pseudo-elemento, sem alterar o layout.
+
+A densidade compacta do sistema se aplica ao que é lido: listas, indicadores,
+tabelas de rastreabilidade e campos secundários.
+
 ## Limites conhecidos
 
 - A leitura por câmera exige **HTTPS** (ou `localhost`). Em `http://` o
